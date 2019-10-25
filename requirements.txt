@@ -1,2 +1,3 @@
+colored
 coverage
 python-coveralls
