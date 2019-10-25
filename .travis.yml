@@ -5,5 +5,6 @@ install:
   - pip install -r requirements.txt
 script:
   make test
+  coverage run -m unittest
 after_success:
   - coveralls
