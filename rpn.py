@@ -1,5 +1,7 @@
 """RPN calculator."""
 
+from colored import fg, bg, attr
+
 
 def calculate(
         expr,
@@ -29,7 +31,9 @@ def main(
 ):
     """RPN calculator."""
     while True:
-        calculate(input("rpn calc > "))
+        color = fg("#C0C0C0") + bg("#00005f")
+        res = attr("reset")
+        calculate(input(f"{color}rpn calc{res} > "))
 
 if __name__ == "__main__":
     main()
