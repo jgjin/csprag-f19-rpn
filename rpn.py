@@ -37,7 +37,7 @@ def main(
     while True:
         color = fg("#C0C0C0") + bg("#00005f")
         res = attr("reset")
-        calculate(input(f"{color}rpn calc{res} > "))
+        print(calculate(input(f"{color}rpn calc{res} > ")))
 
 if __name__ == "__main__":
     main()
