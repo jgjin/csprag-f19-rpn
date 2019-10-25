@@ -7,13 +7,15 @@ def calculate(
     """Calculate RPN expression."""
     stack = list()
     for token in expr.split():
-        if isinstance(token, str) and token in "+-":
+        if isinstance(token, str) and token in "+-^":
             second_arg = stack.pop()
             first_arg = stack.pop()
             if token == "+":
                 stack.append(first_arg + second_arg)
             elif token == "-":
                 stack.append(first_arg - second_arg)
+            else:
+                stack.append(first_arg ** second_arg)
         else:
             stack.append(int(token))
 
